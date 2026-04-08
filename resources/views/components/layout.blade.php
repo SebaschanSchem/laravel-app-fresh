@@ -26,14 +26,13 @@
     }
     </style>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/formtest">Form Test</a>
-        <a href="/posts">Posts</a>
-        <a href="/register">User Registration</a>
-    </nav>
+    <nav class="flex items-center justify-center gap-2 shadow-md">
+    <a href="/" class="hover:bg-gray-200 transition-colors duration-200">Home</a>
+    <a href="/about" class="hover:bg-gray-200 transition-colors duration-200">About</a>
+    <a href="/contact" class="hover:bg-gray-200 transition-colors duration-200">Contact</a>
+    <a href="/posts" class="hover:bg-gray-200 transition-colors duration-200">Posts</a>
+    <a href="/register" class="hover:bg-gray-200 transition-colors duration-200">User Registration</a>
+</nav>
 {{ $slot }}
 
 </body>

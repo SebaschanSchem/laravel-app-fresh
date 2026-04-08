@@ -20,35 +20,6 @@ Route::view('/', 'welcome', [
 Route::view('/about', 'about');
 Route::view('/contact', 'contact');
 
-Route::get('/formtest', function(){
-    $posts = Post::all();
-
-    return view('formtest',[
-        'posts' => $posts,
-    ]);
-});
-
-Route::post('/formtest', function(){
-    Post::create([
-        'description' => request('description'),
-    ]);
-
-    return redirect('/formtest');
-});
-
-Route::delete('/formtest/{id}', function ($id) {
-    Post::findOrFail($id)->delete();
-
-    return redirect('/formtest');
-});
-
-Route::get('/delete', function(){
-    Post::truncate();  
-
-    return redirect('/formtest');
-});
-
-
 //index
 Route::get('/posts', function(){
     $posts = Post::all();
